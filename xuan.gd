@@ -22,9 +22,9 @@ func _fixed_process(delta):
 	if move_right:
 		new_anim = "right"
 	elif move_left:
-		new_anim = ""
+		new_anim = "left"
 	elif jump:
-		new_anim = ""
+		new_anim = "jump"
 	elif attack:
 		new_anim = "basic"
 	elif spin:
@@ -34,3 +34,4 @@ func _fixed_process(delta):
 		anim = new_anim
 		
 	self.get_node("AnimationPlayer").play(anim)
+	new_anim = ""
